@@ -28,11 +28,11 @@ def xml_to_csv(path):
 
 def main():
     for directory in ['train','test']:
-#        image_path = os.path.join(os.getcwd(), 'images/{}'.format(directory))
-        image_path = os.path.join("F:\mechine learn\\", 'img/{}'.format(directory))
+        image_path = os.path.join(os.getcwd(), '{}'.format(directory))
+#        image_path = os.path.join("F:\mechinelearn", 'img613/{}'.format(directory))
         xml_df = xml_to_csv(image_path)
 #        xml_df.to_csv('data/{}_labels.csv'.format(directory), index=None)
-        xml_df.to_csv('F:\mechine learn\img\/{}_labels.csv'.format(directory), index=None)
+        xml_df.to_csv('{}_labels.csv'.format(directory), index=None)
         print('Successfully converted xml to csv.')
 
 
